@@ -9,7 +9,7 @@ export default function ProductsStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="PrdctsPage"
+        name="ProductsPage"
         component={Products}
         options={{
           headerTintColor: "black",

@@ -19,7 +19,7 @@ export default function ProductDetail() {
     uri: product.imageURL,
   };
 
-  const extractId = (_, index) => `${product.p_id}_${index}`;
+  const extractId = (item, index) => `${item}_${index}`;
 
   const renderIngredients = ({ item }) => (
     <View style={styles.badge_container}>
