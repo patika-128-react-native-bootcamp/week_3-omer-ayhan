@@ -1,10 +1,11 @@
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-import Tables from '../../pages/Tables/Tables';
-import TableUpdate from '../../pages/Tables/TableUpdate';
+import Tables from "../../pages/Tables/Tables";
+import TableUpdate from "../../pages/Tables/TableUpdate";
+import headerStyle from "../style/header.style";
 
 export default function TableStack() {
   return (
@@ -13,24 +14,16 @@ export default function TableStack() {
         name="TablesPage"
         component={Tables}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Menu',
+          ...headerStyle,
+          headerTitle: "Menu",
         }}
       />
       <Stack.Screen
         name="TableUpdatePage"
         component={TableUpdate}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Menu',
+          ...headerStyle,
+          headerTitle: "Menu",
         }}
       />
     </Stack.Navigator>
