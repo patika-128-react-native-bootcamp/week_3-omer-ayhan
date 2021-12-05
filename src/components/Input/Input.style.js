@@ -4,9 +4,10 @@ import radius from "../../styles/radius";
 
 const styles = StyleSheet.create({
   container: {
-    margin: spacing.large,
+    marginVertical: spacing.large,
   },
   input_container: {
+    paddingVertical: 0,
     backgroundColor: "#e0e0e0",
     padding: spacing.normal,
     borderRadius: radius.sharp,
@@ -14,7 +15,9 @@ const styles = StyleSheet.create({
     borderColor: "#bdbdbd",
   },
   label: {
-    color: "#8d8d8d",
+    color: "#000",
+    fontSize: 16,
+    marginBottom: spacing.small,
   },
 });
 

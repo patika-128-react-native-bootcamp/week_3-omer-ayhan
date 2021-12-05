@@ -1,4 +1,5 @@
 import { Dimensions, StyleSheet } from "react-native";
+import spacing from "../../../styles/spacing";
 
 export default StyleSheet.create({
   container: {
@@ -20,28 +21,28 @@ export default StyleSheet.create({
     padding: 7,
   },
   description: {
-    margin: 5,
+    margin: spacing.tiny,
     fontSize: 15,
     color: "#000",
   },
   description_container: {
     flex: 1,
-    padding: 5,
+    padding: spacing.tiny,
   },
   price: {
-    marginHorizontal: 10,
+    margin: spacing.normal,
     fontSize: 35,
     textAlign: "right",
     fontWeight: "bold",
     color: "#000",
   },
   badge_group_container: {
-    padding: 5,
+    padding: spacing.tiny,
     paddingHorizontal: 7,
   },
   badge_container: {
     backgroundColor: "#37474f",
-    marginRight: 5,
+    marginRight: spacing.tiny,
     borderRadius: 20,
     padding: 8,
   },

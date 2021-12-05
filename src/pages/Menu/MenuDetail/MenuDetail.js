@@ -21,7 +21,7 @@ export default function MenuDetail() {
       <View style={styles.container}>
         <Text style={styles.label}>Name: {fd.name}</Text>
         <Text style={styles.label}>Description: {fd.description}</Text>
-        <Text style={styles.label}>Price: {fd.price}</Text>
+        <Text style={styles.label}>Price: {fd.price} TL</Text>
         <Text style={styles.label}>Ingredients:</Text>
         <View style={styles.ingredients}>
           {fd.ingredients.split(",").map(renderIngredients)}

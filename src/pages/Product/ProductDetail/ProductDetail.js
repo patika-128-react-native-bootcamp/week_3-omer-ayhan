@@ -35,15 +35,14 @@ export default function ProductDetail() {
           <Text style={styles.name_label}>{product.name}</Text>
           {product.isPopular && <Icon name="star" color="orange" size={25} />}
         </View>
-        <View style={styles.badge_group_container}>
-          <FlatList
-            horizontal
-            bounces={false}
-            keyExtractor={extractId}
-            data={product.ingredients}
-            renderItem={renderIngredients}
-          />
-        </View>
+        <FlatList
+          style={styles.badge_group_container}
+          horizontal
+          bounces={false}
+          keyExtractor={extractId}
+          data={product.ingredients}
+          renderItem={renderIngredients}
+        />
 
         <View style={styles.description_container}>
           <Text style={styles.description}>{product.description}</Text>

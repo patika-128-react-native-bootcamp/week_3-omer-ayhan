@@ -1,12 +1,15 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
+import spacing from "../../../styles/spacing";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
+    margin: spacing.large,
   },
   menu_name: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    margin: 5,
+    color: "#000",
+    fontSize: 28,
+    fontWeight: "bold",
+    margin: spacing.tiny,
   },
 });
