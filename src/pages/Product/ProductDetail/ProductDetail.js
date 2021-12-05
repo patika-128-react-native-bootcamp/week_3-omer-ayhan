@@ -1,5 +1,5 @@
-import { useRoute } from "@react-navigation/core";
 import React from "react";
+import { useRoute } from "@react-navigation/core";
 import {
   View,
   SafeAreaView,

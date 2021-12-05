@@ -1,52 +1,55 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import MenuStack from './MenuStack';
-import TableStack from './TableStack';
-import ProductsStack from './ProductsStack';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import MenuStack from "./MenuStack";
+import TableStack from "./TableStack";
+import ProductsStack from "./ProductsStack";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator screenOptions={{headerShown: false}}>
-        <Drawer.Screen
-          name="ProductsStack"
+      <Tab.Navigator>
+        <Tab.Screen
+          name="Products"
           component={ProductsStack}
           options={{
-            drawerLabel: 'Products',
-            drawerIcon: ({size, color}) => (
+            tabBarLabel: "Products",
+            tabBarIcon: ({ size, color }) => (
               <Icon name="food-croissant" color={color} size={size} />
             ),
-            drawerActiveTintColor: '#ab47bc',
+            drawerActiveTintColor: "#ab47bc",
+            headerShown: false,
           }}
         />
-        <Drawer.Screen
-          name="MenuStack"
+        <Tab.Screen
+          name="Menu"
           component={MenuStack}
           options={{
-            drawerLabel: 'Menu',
-            drawerIcon: ({size, color}) => (
+            tabBarIcon: "Menu",
+            tabBarIcon: ({ size, color }) => (
               <Icon name="book-open-page-variant" color={color} size={size} />
             ),
-            drawerActiveTintColor: '#ab47bc',
+            drawerActiveTintColor: "#ab47bc",
+            headerShown: false,
           }}
         />
-        <Drawer.Screen
-          name="TableStack"
+        <Tab.Screen
+          name="Tables"
           component={TableStack}
           options={{
-            drawerLabel: 'Tables',
-            drawerIcon: ({size, color}) => (
+            tabBarIcon: "Tables",
+            tabBarIcon: ({ size, color }) => (
               <Icon name="table-furniture" color={color} size={size} />
             ),
-            drawerActiveTintColor: '#ab47bc',
+            drawerActiveTintColor: "#ab47bc",
+            headerShown: false,
           }}
         />
-      </Drawer.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }

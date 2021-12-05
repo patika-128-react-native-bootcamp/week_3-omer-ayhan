@@ -14,7 +14,7 @@ export default function ProductsStack() {
         options={{
           headerTintColor: "black",
           headerTitleStyle: {
-            fontWeight: "300",
+            fontWeight: "500",
           },
           headerBackTitleVisible: false,
           headerTitle: "Products",
@@ -26,7 +26,7 @@ export default function ProductsStack() {
         options={{
           headerTintColor: "black",
           headerTitleStyle: {
-            fontWeight: "300",
+            fontWeight: "500",
           },
           headerBackTitleVisible: false,
           headerTitle: "Product Detail",
