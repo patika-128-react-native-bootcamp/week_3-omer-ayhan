@@ -7,6 +7,7 @@ import Input from "../../../components/Input";
 import Button from "../../../components/Button";
 
 import styles from "./CreateMenu.styles";
+import routes from "../../../navigation/routes";
 
 export default function CreateMenu() {
   const navigation = useNavigation();
@@ -30,14 +31,14 @@ export default function CreateMenu() {
       Alert.alert("Error", "Price must be a number");
       return;
     }
-    const fd = {
+    const foodDetail = {
       name: name,
       description: description,
       ingredients: ingredients,
       price: price,
     };
 
-    navigation.navigate("MenuDetailPage", { fd });
+    navigation.navigate(routes.menuStack.menuDetail, { foodDetail });
   }
 
   return (

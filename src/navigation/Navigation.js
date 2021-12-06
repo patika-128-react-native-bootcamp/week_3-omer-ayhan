@@ -6,15 +6,18 @@ import MenuStack from "./MenuStack";
 import TableStack from "./TableStack";
 import ProductsStack from "./ProductsStack";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import routes from "./routes";
 
 const Tab = createBottomTabNavigator();
+
+const { productsTab, menuTab, tablesTab } = routes.mainStack;
 
 export default function Navigation() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="Products"
+          name={productsTab}
           component={ProductsStack}
           options={{
             tabBarLabel: "Products",
@@ -26,7 +29,7 @@ export default function Navigation() {
           }}
         />
         <Tab.Screen
-          name="Menu"
+          name={menuTab}
           component={MenuStack}
           options={{
             tabBarIcon: "Menu",
@@ -38,7 +41,7 @@ export default function Navigation() {
           }}
         />
         <Tab.Screen
-          name="Tables"
+          name={tablesTab}
           component={TableStack}
           options={{
             tabBarIcon: "Tables",

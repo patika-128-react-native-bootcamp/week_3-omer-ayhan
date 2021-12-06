@@ -5,14 +5,16 @@ import Menu from "../../pages/Menu/Menu";
 import MenuDetail from "../../pages/Menu/MenuDetail";
 import CreateMenu from "../../pages/Menu/CreateMenu";
 import headerStyle from "../style/header.style";
+import routes from "../routes";
 
 const Stack = createNativeStackNavigator();
+const { menu, createMenu, menuDetail } = routes.menuStack;
 
-export default function MenuStck() {
+export default function MenuStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="MenuPage"
+        name={menu}
         component={Menu}
         options={{
           ...headerStyle,
@@ -20,7 +22,7 @@ export default function MenuStck() {
         }}
       />
       <Stack.Screen
-        name="CreateMenuPage"
+        name={createMenu}
         component={CreateMenu}
         options={{
           ...headerStyle,
@@ -28,7 +30,7 @@ export default function MenuStck() {
         }}
       />
       <Stack.Screen
-        name="MenuDetailPage"
+        name={menuDetail}
         component={MenuDetail}
         options={{
           ...headerStyle,

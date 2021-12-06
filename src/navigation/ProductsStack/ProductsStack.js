@@ -4,19 +4,21 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Products from "../../pages/Product/Products";
 import ProductDetail from "../../pages/Product/ProductDetail";
 import headerStyle from "../style/header.style";
+import routes from "../routes";
 
 const Stack = createNativeStackNavigator();
+const { products, productDetail } = routes.productsStack;
 
 export default function ProductsStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="ProductsPage"
+        name={products}
         component={Products}
         options={{ ...headerStyle, headerTitle: "Products" }}
       />
       <Stack.Screen
-        name="ProductDetailPage"
+        name={productDetail}
         component={ProductDetail}
         options={{
           ...headerStyle,
