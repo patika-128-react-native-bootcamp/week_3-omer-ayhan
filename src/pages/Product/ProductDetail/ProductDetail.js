@@ -9,6 +9,7 @@ import {
   FlatList,
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import ProductDetailCard from "../../../components/cards/ProductDetailCard";
 import styles from "./ProductDetail.styles";
 
 export default function ProductDetail() {
@@ -22,9 +23,7 @@ export default function ProductDetail() {
   const extractId = (item, index) => `${item}_${index}`;
 
   const renderIngredients = ({ item }) => (
-    <View style={styles.badge_container}>
-      <Text style={styles.badge_label}>{item}</Text>
-    </View>
+    <ProductDetailCard detailData={item} />
   );
 
   return (

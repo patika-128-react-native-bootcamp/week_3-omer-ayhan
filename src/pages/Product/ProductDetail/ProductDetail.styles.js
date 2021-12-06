@@ -40,15 +40,4 @@ export default StyleSheet.create({
     padding: spacing.tiny,
     paddingHorizontal: 7,
   },
-  badge_container: {
-    backgroundColor: "#37474f",
-    marginRight: spacing.tiny,
-    borderRadius: 20,
-    padding: 8,
-  },
-  badge_label: {
-    fontSize: 13,
-    color: "#fff",
-    fontWeight: "bold",
-  },
 });
