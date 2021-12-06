@@ -6,12 +6,15 @@ const Stack = createNativeStackNavigator();
 import Tables from "../../pages/Tables/Tables";
 import TableUpdate from "../../pages/Tables/TableUpdate";
 import headerStyle from "../style/header.style";
+import routes from "../routes";
+
+const { tables, tableUpdate } = routes.tablesStack;
 
 export default function TableStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="TablesPage"
+        name={tables}
         component={Tables}
         options={{
           ...headerStyle,
@@ -19,7 +22,7 @@ export default function TableStack() {
         }}
       />
       <Stack.Screen
-        name="TableUpdatePage"
+        name={tableUpdate}
         component={TableUpdate}
         options={{
           ...headerStyle,

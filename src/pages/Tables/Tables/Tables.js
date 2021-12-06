@@ -5,6 +5,7 @@ import { SafeAreaView, FlatList } from "react-native";
 import styles from "./Tables.styles";
 import TableCard from "../../../components/cards/TableCard";
 import mock_data from "../../../MOCK_DATA.json";
+import routes from "../../../navigation/routes";
 
 export default function Table() {
   const route = useRoute();
@@ -12,7 +13,9 @@ export default function Table() {
   const [tables, setTables] = useState(mock_data.tables);
 
   const handleNavigateTableDetail = (selectedTable) => () => {
-    navigation.navigate("TableUpdatePage", { table: selectedTable });
+    navigation.navigate(routes.tablesStack.tableUpdate, {
+      table: selectedTable,
+    });
   };
 
   const renderTables = ({ item }) => (

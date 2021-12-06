@@ -1,23 +1,20 @@
 import { useNavigation, useRoute } from "@react-navigation/core";
 import React from "react";
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, Text, FlatList } from "react-native";
 import Button from "../../../components/Button";
+import OrderCard from "../../../components/cards/OrderCard";
+import routes from "../../../navigation/routes";
 
 import styles from "./TableUpdate.styles";
-
-const mapOrders = (order, i) => (
-  <View key={i} style={styles.order_container}>
-    <Text style={styles.order_name}>⏺ {order.name}</Text>
-    <Text key={i} style={styles.order_price}>
-      {order.price} TL
-    </Text>
-  </View>
-);
 
 export default function TableUpdate() {
   const navigation = useNavigation();
   const route = useRoute();
   const { table } = route.params;
+
+  const renderOrders = ({ item }) => <OrderCard orderData={item} />;
+
+  const extractId = (_, index) => `**${index}**`;
 
   const hasOrders = table.orders.length > 0;
 
@@ -29,7 +26,7 @@ export default function TableUpdate() {
   );
 
   function handleCloseTable() {
-    navigation.navigate("TablesPage", {
+    navigation.navigate(routes.tablesStack.tables, {
       updatedTable: { ...table, isActive: false },
     });
   }
@@ -39,7 +36,11 @@ export default function TableUpdate() {
       <View style={styles.container}>
         <Text style={styles.name_label}>{table.name}</Text>
         {hasOrders ? (
-          table.orders.map(mapOrders)
+          <FlatList
+            data={table.orders}
+            renderItem={renderOrders}
+            keyExtractor={extractId}
+          />
         ) : (
           <Text style={styles.empty_table_text}>No orders</Text>
         )}
