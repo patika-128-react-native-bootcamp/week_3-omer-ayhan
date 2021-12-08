@@ -7,7 +7,7 @@ import headerStyle from "../style/header.style";
 import routes from "../routes";
 
 const Stack = createNativeStackNavigator();
-const { products, productDetail } = routes.productsStack;
+const { products, productDetail } = routes.productsStack; // page names
 
 export default function ProductsStack() {
   return (

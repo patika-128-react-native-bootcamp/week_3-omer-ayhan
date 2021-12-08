@@ -10,7 +10,7 @@ import routes from "./routes";
 
 const Tab = createBottomTabNavigator();
 
-const { productsTab, menuTab, tablesTab } = routes.mainStack;
+const { productsTab, menuTab, tablesTab } = routes.mainStack; // page names
 
 export default function Navigation() {
   return (
@@ -22,7 +22,7 @@ export default function Navigation() {
           options={{
             tabBarLabel: "Products",
             tabBarIcon: ({ size, color }) => (
-              <Icon name="food-croissant" color={color} size={size} />
+              <Icon name="food-croissant" color={color} size={size} /> // icon for products tab with size and color props defined in the options object
             ),
             drawerActiveTintColor: "#ab47bc",
             headerShown: false,
@@ -34,7 +34,7 @@ export default function Navigation() {
           options={{
             tabBarIcon: "Menu",
             tabBarIcon: ({ size, color }) => (
-              <Icon name="book-open-page-variant" color={color} size={size} />
+              <Icon name="book-open-page-variant" color={color} size={size} /> // icon for menu tab with size and color props defined in the options object
             ),
             drawerActiveTintColor: "#ab47bc",
             headerShown: false,
@@ -46,7 +46,7 @@ export default function Navigation() {
           options={{
             tabBarIcon: "Tables",
             tabBarIcon: ({ size, color }) => (
-              <Icon name="table-furniture" color={color} size={size} />
+              <Icon name="table-furniture" color={color} size={size} /> // icon for tables tab with size and color props defined in the options object
             ),
             drawerActiveTintColor: "#ab47bc",
             headerShown: false,

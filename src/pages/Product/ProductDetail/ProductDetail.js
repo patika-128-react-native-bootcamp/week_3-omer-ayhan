@@ -20,7 +20,7 @@ export default function ProductDetail() {
     uri: product.imageURL,
   };
 
-  const extractId = (item, index) => `${item}_${index}`;
+  const extractId = (item, index) => `${item}_${index}`; // id for each item in the FlatList
 
   const renderIngredients = ({ item }) => (
     <ProductDetailCard detailData={item} />
@@ -32,6 +32,9 @@ export default function ProductDetail() {
         <Image style={styles.image} source={image} />
         <View style={styles.name_container}>
           <Text style={styles.name_label}>{product.name}</Text>
+          {/* 
+            if isPopular is true, then render the icon
+          */}
           {product.isPopular && <Icon name="star" color="orange" size={25} />}
         </View>
         <FlatList

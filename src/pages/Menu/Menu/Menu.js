@@ -11,6 +11,8 @@ import routes from "../../../navigation/routes";
 export default function Menu() {
   const navigation = useNavigation();
 
+  // navigate to the route with menuName parameter when the card is pressed
+  // pass the menu name to the create menu screen
   const handleNavigateMenuCreate = (selectedMenuName) => () =>
     navigation.navigate(routes.menuStack.createMenu, {
       menuName: selectedMenuName,

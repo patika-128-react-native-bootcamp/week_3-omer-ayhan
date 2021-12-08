@@ -1,14 +1,14 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Stack = createNativeStackNavigator();
-
 import Tables from "../../pages/Tables/Tables";
 import TableUpdate from "../../pages/Tables/TableUpdate";
 import headerStyle from "../style/header.style";
 import routes from "../routes";
 
-const { tables, tableUpdate } = routes.tablesStack;
+const Stack = createNativeStackNavigator();
+
+const { tables, tableUpdate } = routes.tablesStack; // page names
 
 export default function TableStack() {
   return (

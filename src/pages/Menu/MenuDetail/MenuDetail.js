@@ -24,6 +24,9 @@ export default function MenuDetail() {
         <Text style={styles.label}>Price: {foodDetail.price} TL</Text>
         <Text style={styles.label}>Ingredients:</Text>
         <View style={styles.ingredients}>
+          {/* 
+           split the ingredients string to array by commas and map the array to render the ingredients
+          */}
           {foodDetail.ingredients.split(",").map(renderIngredients)}
         </View>
       </View>

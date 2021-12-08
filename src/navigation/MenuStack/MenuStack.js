@@ -8,7 +8,7 @@ import headerStyle from "../style/header.style";
 import routes from "../routes";
 
 const Stack = createNativeStackNavigator();
-const { menu, createMenu, menuDetail } = routes.menuStack;
+const { menu, createMenu, menuDetail } = routes.menuStack; // our pagge names
 
 export default function MenuStack() {
   return (

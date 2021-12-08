@@ -17,7 +17,7 @@ export default function Products() {
   const renderProduct = ({ item }) => (
     <ProductCard item={item} onSelect={navigate(item)} />
   );
-  const extractId = ({ p_id }, index) => `${p_id}||${index}`;
+  const extractId = ({ p_id }, index) => `${p_id}||${index}`; // extract id from product object
 
   return (
     <SafeAreaView>

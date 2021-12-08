@@ -9,7 +9,7 @@ import styles from "./CreateMenu.styles";
 import routes from "../../../navigation/routes";
 
 export default function CreateMenu() {
-  const navigation = useNavigation();
+  const navigation = useNavigation(); // using navigation hook
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -18,11 +18,13 @@ export default function CreateMenu() {
   const route = useRoute();
 
   function handleNavigateDetail() {
+    // check if all fields are filled
     if (!name || !description || !ingredients || !price) {
       Alert.alert("Error", "Fill all the fields");
       return;
     }
 
+    // check if price is a number
     if (!Number(price)) {
       Alert.alert("Error", "Price must be a number");
       return;
@@ -34,7 +36,7 @@ export default function CreateMenu() {
       price: price,
     };
 
-    navigation.navigate(routes.menuStack.menuDetail, { foodDetail });
+    navigation.navigate(routes.menuStack.menuDetail, { foodDetail }); // navigate to menuDetail with foodDetail as parameter
   }
 
   return (
