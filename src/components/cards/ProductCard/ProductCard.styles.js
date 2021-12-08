@@ -1,24 +1,25 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { Dimensions, StyleSheet } from "react-native";
 
-const deviceSize = Dimensions.get('window');
+const deviceSize = Dimensions.get("window");
 
 export default StyleSheet.create({
   image: {
-    backgroundColor: '#bdbdbd',
+    backgroundColor: "#bdbdbd",
     height: deviceSize.height / 5,
-    alignItems: 'flex-end',
-    flexDirection: 'row',
+    alignItems: "flex-end",
+    flexDirection: "row",
   },
   name_label: {
     margin: 5,
     fontSize: 25,
-    color: 'white',
-    fontWeight: '200',
+    color: "white",
+    fontWeight: "bold",
   },
   name_container: {
+    paddingLeft: 5,
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
   },
 });

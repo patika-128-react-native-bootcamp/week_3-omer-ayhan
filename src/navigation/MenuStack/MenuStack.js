@@ -1,49 +1,40 @@
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Menu from '../../pages/Menu/Menu';
-import MenuDetail from '../../pages/Menu/MenuDetail';
-import CreateMenu from '../../pages/Menu/CreateMenu';
+import Menu from "../../pages/Menu/Menu";
+import MenuDetail from "../../pages/Menu/MenuDetail";
+import CreateMenu from "../../pages/Menu/CreateMenu";
+import headerStyle from "../style/header.style";
+import routes from "../routes";
 
 const Stack = createNativeStackNavigator();
+const { menu, createMenu, menuDetail } = routes.menuStack; // our pagge names
 
-export default function MenuStck() {
+export default function MenuStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="MenuPage"
+        name={menu}
         component={Menu}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Menu',
+          ...headerStyle,
+          headerTitle: "Menu",
         }}
       />
       <Stack.Screen
-        name="CreateMenuPage"
+        name={createMenu}
         component={CreateMenu}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Create Menu',
+          ...headerStyle,
+          headerTitle: "Create Menu",
         }}
       />
       <Stack.Screen
-        name="MenuDetailPage"
+        name={menuDetail}
         component={MenuDetail}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Menu Detail',
+          ...headerStyle,
+          headerTitle: "Menu Detail",
         }}
       />
     </Stack.Navigator>

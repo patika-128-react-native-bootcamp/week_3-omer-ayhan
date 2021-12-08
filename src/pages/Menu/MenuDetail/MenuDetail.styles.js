@@ -1,29 +1,34 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
+import radius from "../../../styles/radius";
+import spacing from "../../../styles/spacing";
 
 export default StyleSheet.create({
   container: {
-    borderColor: '#bdbdbd',
+    borderColor: "#bdbdbd",
     borderWidth: 1,
-    margin: 10,
-    padding: 10,
+    borderRadius: radius.soft,
+    margin: spacing.normal,
+    padding: spacing.normal,
   },
   label: {
-    color: '#8d8d8d',
-    fontSize: 12,
-    marginVertical: 5,
+    color: "#000",
+    fontSize: 14,
+    marginVertical: spacing.small,
+    flexWrap: "wrap",
   },
   ingredients: {
-    flexDirection: 'row',
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   badge_container: {
-    backgroundColor: '#37474f',
-    margin: 3,
-    borderRadius: 10,
-    padding: 5,
+    backgroundColor: "#37474f",
+    margin: spacing.micro,
+    borderRadius: 15,
+    padding: 7,
   },
   badge_label: {
-    fontSize: 10,
-    color: '#e0e0e0',
-    fontWeight: 'bold',
+    fontSize: 12,
+    color: "#e0e0e0",
+    fontWeight: "bold",
   },
 });

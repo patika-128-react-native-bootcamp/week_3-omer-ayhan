@@ -1,36 +1,32 @@
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import Tables from "../../pages/Tables/Tables";
+import TableUpdate from "../../pages/Tables/TableUpdate";
+import headerStyle from "../style/header.style";
+import routes from "../routes";
 
 const Stack = createNativeStackNavigator();
 
-import Tables from '../../pages/Tables/Tables';
-import TableUpdate from '../../pages/Tables/TableUpdate';
+const { tables, tableUpdate } = routes.tablesStack; // page names
 
 export default function TableStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="TablesPage"
+        name={tables}
         component={Tables}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Menu',
+          ...headerStyle,
+          headerTitle: "Tables",
         }}
       />
       <Stack.Screen
-        name="TableUpdatePage"
+        name={tableUpdate}
         component={TableUpdate}
         options={{
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: '300',
-          },
-          headerBackTitleVisible: false,
-          headerTitle: 'Menu',
+          ...headerStyle,
+          headerTitle: "Table Update",
         }}
       />
     </Stack.Navigator>

@@ -1,45 +1,43 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { Dimensions, StyleSheet } from "react-native";
+import spacing from "../../../styles/spacing";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
   },
   image: {
-    height: Dimensions.get('window').height / 4,
-    backgroundColor: '#e0e0e0',
+    height: Dimensions.get("window").height / 4,
+    backgroundColor: "#e0e0e0",
   },
   name_label: {
-    fontWeight: '200',
+    color: "#000",
+    fontWeight: "bold",
     fontSize: 25,
   },
   name_container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 5,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 7,
   },
   description: {
-    margin: 5,
-    fontSize: 12,
+    margin: spacing.tiny,
+    fontSize: 15,
+    color: "#000",
   },
   description_container: {
     flex: 1,
+    padding: spacing.tiny,
   },
   price: {
-    margin: 5,
+    margin: spacing.normal,
     fontSize: 35,
-    textAlign: 'right',
-    fontWeight: 'bold',
+    textAlign: "right",
+    fontWeight: "bold",
+    color: "#000",
   },
-  badge_container: {
-    backgroundColor: '#37474f',
-    margin: 3,
-    borderRadius: 10,
-    padding: 5,
-  },
-  badge_label: {
-    fontSize: 10,
-    color: '#e0e0e0',
-    fontWeight: 'bold',
+  badge_group_container: {
+    padding: spacing.tiny,
+    paddingHorizontal: 7,
   },
 });
