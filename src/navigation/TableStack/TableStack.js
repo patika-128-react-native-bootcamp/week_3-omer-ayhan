@@ -18,7 +18,7 @@ export default function TableStack() {
         component={Tables}
         options={{
           ...headerStyle,
-          headerTitle: "Menu",
+          headerTitle: "Tables",
         }}
       />
       <Stack.Screen
@@ -26,7 +26,7 @@ export default function TableStack() {
         component={TableUpdate}
         options={{
           ...headerStyle,
-          headerTitle: "Menu",
+          headerTitle: "Table Update",
         }}
       />
     </Stack.Navigator>
