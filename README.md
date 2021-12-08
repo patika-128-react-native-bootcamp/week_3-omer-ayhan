@@ -6,7 +6,7 @@
 
 - [Install React Native](https://reactnative.dev/docs/environment-setup)
 
-- Create a folder then `git clone <My Repository Adress>` to pull github repository
+- Create a folder then `git clone <My Repository Adress>` to clone github repository
 
 - npm install for installing all the dependencies
 
